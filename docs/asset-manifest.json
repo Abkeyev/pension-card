@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bcc-redesign/static/css/main.0fab470f.chunk.css",
-    "main.js": "/bcc-redesign/static/js/main.446ec2aa.chunk.js",
-    "main.js.map": "/bcc-redesign/static/js/main.446ec2aa.chunk.js.map",
+    "main.js": "/bcc-redesign/static/js/main.469369fd.chunk.js",
+    "main.js.map": "/bcc-redesign/static/js/main.469369fd.chunk.js.map",
     "runtime-main.js": "/bcc-redesign/static/js/runtime-main.4b35054c.js",
     "runtime-main.js.map": "/bcc-redesign/static/js/runtime-main.4b35054c.js.map",
     "static/js/2.cd2ee75c.chunk.js": "/bcc-redesign/static/js/2.cd2ee75c.chunk.js",
     "static/js/2.cd2ee75c.chunk.js.map": "/bcc-redesign/static/js/2.cd2ee75c.chunk.js.map",
     "index.html": "/bcc-redesign/index.html",
-    "precache-manifest.a0979dbd92dc9aa7af6e143db135c32e.js": "/bcc-redesign/precache-manifest.a0979dbd92dc9aa7af6e143db135c32e.js",
+    "precache-manifest.66eafafa1d4a986eb406a487a9082ad4.js": "/bcc-redesign/precache-manifest.66eafafa1d4a986eb406a487a9082ad4.js",
     "service-worker.js": "/bcc-redesign/service-worker.js",
     "static/css/main.0fab470f.chunk.css.map": "/bcc-redesign/static/css/main.0fab470f.chunk.css.map",
     "static/js/2.cd2ee75c.chunk.js.LICENSE.txt": "/bcc-redesign/static/js/2.cd2ee75c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4b35054c.js",
     "static/js/2.cd2ee75c.chunk.js",
     "static/css/main.0fab470f.chunk.css",
-    "static/js/main.446ec2aa.chunk.js"
+    "static/js/main.469369fd.chunk.js"
   ]
 }
