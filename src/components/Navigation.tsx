@@ -67,6 +67,27 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundColor: "#27AE60!important",
       },
     },
+    mvpLinks: {
+      height: "0",
+      paddingTop: 24,
+      overflow: "hidden",
+      transition: "all .5s ease",
+      "& > a": {
+        color: "#27AE60",
+        display: "inline-block",
+        margin: "12px 24px",
+      },
+    },
+    show: {
+      height: "100px",
+    },
+    hindMenuBtn: {
+      position: "absolute",
+      left: 12,
+      top: 0,
+      padding: 4,
+      backgroundColor: "#dedede",
+    },
   })
 );
 
@@ -126,6 +147,7 @@ const Navigation = (props: any) => {
       ],
     },
   ];
+  const [menu, showMenu] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const [subIndex, setSubIndex] = React.useState(0);
   const classes = useStyles({});
@@ -140,6 +162,26 @@ const Navigation = (props: any) => {
 
   return (
     <div className={classes.outerContainer}>
+      <span className={classes.hindMenuBtn} onClick={() => showMenu(!menu)}>
+        ShowMenu
+      </span>
+      <div className={`${classes.mvpLinks} ${menu ? classes.show : ""}`}>
+        <Link to="/">Частным клиентам</Link>
+        <Link to="/business">Бизнес клиентам</Link>
+        <Link to="/credits-restructuring">Отсрочка по выплатам</Link>
+        <Link to="/crediting">Кредитование</Link>
+        <Link to="/open-current-account">Открытие текущего счета</Link>
+        <Link to="/currency">Курсы валют</Link>
+        <Link to="/contacts">Контакты</Link>
+        <Link to="/branches">Офисы и банкоматы</Link>
+        <Link to="/call-center">Центр обслуживания вызовов</Link>
+        <Link to="/news">Новости</Link>
+        <Link to="/baspana-hit">Баспана Хит</Link>
+        <Link to="/faq">Часто задаваемые вопросы</Link>
+        <Link to="/p2p">Переводы с карты на карту</Link>
+        <Link to="/details">Реквизиты АО “Банк Центркредит”</Link>
+        <Link to="/car-credit">Автокредитование</Link>
+      </div>
       <div className={classes.innerContainer}>
         <div className={classes.container}>
           <Grid
