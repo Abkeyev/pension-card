@@ -25,28 +25,27 @@ const App = () => {
       <Navigation />
       <Switch>
         <Route exact path="/" component={MainPage} />
-        <Route exact path="/business" component={BusinessPage} />
+        <Route path="/business" component={BusinessPage} />
         <Route
-          exact
           path="/credits-restructuring"
           component={CreditsRestructuringPage}
         />
-        <Route exact path="/crediting" component={CreditingPage} />
+        <Route path="/crediting" component={CreditingPage} />
         <Route
           exact
           path="/open-current-account"
           component={OpenCurrentAccountPage}
         />
-        <Route exact path="/currency" component={CurrencyPage} />
-        <Route exact path="/contacts" component={ContactsPage} />
-        <Route exact path="/branches" component={BranchesPage} />
-        <Route exact path="/call-center" component={CallCenterPage} />
-        <Route exact path="/news" component={NewsPage} />
-        <Route exact path="/baspana-hit" component={BaspanaHitPage} />
-        <Route exact path="/faq" component={FaqPage} />
-        <Route exact path="/p2p" component={p2pPage} />
-        <Route exact path="/details" component={DetailsPage} />
-        <Route exact path="/car-credit" component={CarCreditPage} />
+        <Route path="/currency" component={CurrencyPage} />
+        <Route path="/contacts" component={ContactsPage} />
+        <Route path="/branches" component={BranchesPage} />
+        <Route path="/call-center" component={CallCenterPage} />
+        <Route path="/news" component={NewsPage} />
+        <Route path="/baspana-hit" component={BaspanaHitPage} />
+        <Route path="/faq" component={FaqPage} />
+        <Route path="/p2p" component={p2pPage} />
+        <Route path="/details" component={DetailsPage} />
+        <Route path="/car-credit" component={CarCreditPage} />
       </Switch>
       <Footer />
     </Router>
