@@ -1,8 +1,22 @@
-## Дизайн сайта тут
+## Страницы
 
-https://www.figma.com/file/OnOgpP3M4Cs6c38bmWInBJ/Redesign-bcc.kz?node-id=2945%3A0
+[Figma]https://www.figma.com/file/OnOgpP3M4Cs6c38bmWInBJ/Redesign-bcc.kz?node-id=2945%3A0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Частным клиентам](https://abkeyev.github.io/bcc-redesign/).
+[Бизнес клиентам](https://abkeyev.github.io/bcc-redesign/business).
+[Отсрочка по выплатам](https://abkeyev.github.io/bcc-redesign/credits-restructuring).
+[Кредитование](https://abkeyev.github.io/bcc-redesign/crediting).
+[Открытие текущего счета](https://abkeyev.github.io/bcc-redesign/open-current-account).
+[Курсы валют](https://abkeyev.github.io/bcc-redesign/currency).
+[Контакты](https://abkeyev.github.io/bcc-redesign/contacts).
+[Офисы и банкоматы](https://abkeyev.github.io/bcc-redesign/branches).
+[Центр обслуживания вызовов](https://abkeyev.github.io/bcc-redesign/call-center).
+[Новости](https://abkeyev.github.io/bcc-redesign/news).
+[Баспана Хит](https://abkeyev.github.io/bcc-redesign/baspana-hit).
+[Часто задаваемые вопросы](https://abkeyev.github.io/bcc-redesign/faq).
+[Переводы с карты на карту](https://abkeyev.github.io/bcc-redesign/p2p).
+[Реквизиты АО “Банк Центркредит”](https://abkeyev.github.io/bcc-redesign/details).
+[Автокредитование](https://abkeyev.github.io/bcc-redesign/car-credit).
 
 ## Available Scripts
 
