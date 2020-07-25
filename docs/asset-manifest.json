@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bcc-redesign-beta/static/css/main.0fab470f.chunk.css",
+    "main.js": "/bcc-redesign-beta/static/js/main.18374587.chunk.js",
+    "main.js.map": "/bcc-redesign-beta/static/js/main.18374587.chunk.js.map",
+    "runtime-main.js": "/bcc-redesign-beta/static/js/runtime-main.35e491fc.js",
+    "runtime-main.js.map": "/bcc-redesign-beta/static/js/runtime-main.35e491fc.js.map",
+    "static/js/2.ee716a62.chunk.js": "/bcc-redesign-beta/static/js/2.ee716a62.chunk.js",
+    "static/js/2.ee716a62.chunk.js.map": "/bcc-redesign-beta/static/js/2.ee716a62.chunk.js.map",
+    "index.html": "/bcc-redesign-beta/index.html",
+    "precache-manifest.7b60f572f14cc1737b194a63ca169cb8.js": "/bcc-redesign-beta/precache-manifest.7b60f572f14cc1737b194a63ca169cb8.js",
+    "service-worker.js": "/bcc-redesign-beta/service-worker.js",
+    "static/css/main.0fab470f.chunk.css.map": "/bcc-redesign-beta/static/css/main.0fab470f.chunk.css.map",
+    "static/js/2.ee716a62.chunk.js.LICENSE.txt": "/bcc-redesign-beta/static/js/2.ee716a62.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35e491fc.js",
+    "static/js/2.ee716a62.chunk.js",
+    "static/css/main.0fab470f.chunk.css",
+    "static/js/main.18374587.chunk.js"
+  ]
+}
