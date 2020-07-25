@@ -21,7 +21,7 @@ import {
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Navigation />
       <Switch>
         <Route exact path="/" component={MainPage} />
