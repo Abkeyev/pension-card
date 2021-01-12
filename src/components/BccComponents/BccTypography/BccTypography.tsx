@@ -4,23 +4,43 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     text: {
-      fontWeight: 300,
+      fontWeight: 400,
       display: "inline-block",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontSize: 18,
       lineHeight: "24px",
+      "& a": {
+        color: "#27AE60",
+        textDecoration: "inherit",
+      },
     },
     p1: {
       fontSize: 18,
       lineHeight: "24px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 16,
+        lineHeight: "20px",
+      },
+      ["@media (max-width:600px)"]: {
+        fontSize: 14,
+        lineHeight: "20px",
+      },
     },
     p2: {
       fontSize: 16,
       lineHeight: "20px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 14,
+        lineHeight: "20px",
+      },
     },
     p2l: {
       fontSize: 18,
       lineHeight: "24px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 14,
+        lineHeight: "24px",
+      },
     },
     p3: {
       fontSize: 14,
@@ -32,49 +52,90 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     title: {
       display: "inline-block",
-      fontWeight: 500,
+      fontWeight: 700,
       lineHeight: "52px",
+      "& a": {
+        color: "inherit",
+        textDecoration: "inherit",
+      },
     },
     h1: {
       fontSize: 48,
+      ["@media (max-width:960px)"]: {
+        fontSize: 40,
+        lineHeight: "40px",
+      },
+      ["@media (max-width:600px)"]: {
+        fontSize: 28,
+        lineHeight: "28px",
+      },
     },
     h2: {
       fontSize: 40,
       lineHeight: "40px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 28,
+        lineHeight: "28px",
+      },
+      ["@media (max-width:600px)"]: {
+        fontSize: 18,
+        lineHeight: "20px",
+      },
     },
     h3: {
       fontSize: 28,
       lineHeight: "28px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 22,
+        lineHeight: "24px",
+      },
     },
     h4: {
       fontSize: 22,
       lineHeight: "24px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 18,
+        lineHeight: "20px",
+      },
     },
     h5: {
       fontSize: 20,
       lineHeight: "24px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 16,
+        lineHeight: "20px",
+      },
+      ["@media (max-width:600px)"]: {
+        fontSize: 14,
+        lineHeight: "24px",
+      },
     },
     h6: {
       fontSize: 18,
       lineHeight: "20px",
+      ["@media (max-width:960px)"]: {
+        fontSize: 14,
+        lineHeight: "20px",
+      },
     },
     block: {
       display: "block",
     },
     normal: {
-      fontWeight: 300,
-    },
-    medium: {
       fontWeight: 400,
     },
-    bold: {
+    medium: {
       fontWeight: 500,
+    },
+    bold: {
+      fontWeight: 700,
     },
   })
 );
 
 interface BccTypographyProps extends React.HTMLAttributes<HTMLDivElement> {
   children: any;
+  onClick?: any;
   weight?: "normal" | "medium" | "bold";
   color?: string;
   align?: "center" | "left" | "right" | "justify";
@@ -159,6 +220,7 @@ const BccTypography = (props: BccTypographyProps) => {
         textAlign: align,
         textDecoration: td,
       }}
+      onClick={props.onClick}
     >
       {children}
     </span>

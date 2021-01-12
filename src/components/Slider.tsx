@@ -1,97 +1,339 @@
-import React from "react";
+import React, { Children } from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { BccButton, BccTypography } from "../components/BccComponents";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    [theme.breakpoints.between("md", "xl")]: {},
-    [theme.breakpoints.down("sm")]: {},
-    [theme.breakpoints.down("xs")]: {},
-    outerContainer: {
-      backgroundSize: "cover",
-    },
-    container: {
-      position: "relative",
-      margin: "0 auto",
-      padding: "0",
-      paddingBottom: "32px",
-      maxWidth: 1280,
-      boxSizing: "border-box",
-    },
-    slderTitle: {
-      marginBottom: 24,
-    },
-    sliderSubTitle: {
-      marginBottom: 136,
-      color: "#4D565F",
-    },
-    sliderBtn: {
-      fontSize: 20,
-      minWidth: 350,
-    },
-    slider: {
-      width: "100%",
-      overflowX: "hidden",
-      "& > div": {
-        width: 1280,
-        transition: "all .7s ease-in-out",
-        "& > div": {
-          width: 1280,
-        },
-      },
-    },
-    slide: {
-      "& > div:first-child": {
-        width: "calc(50% - 16px)",
-        padding: "80px 0 92px",
-      },
-      "& > div:last-child": {
+    [theme.breakpoints.between("lg", "xl")]: {
+      outerContainer: {
+        backgroundSize: "cover",
         position: "relative",
-        width: "calc(50% - 16px)",
-        "& > img": {
+        backgroundColor: "#FFF8F2",
+      },
+      bgImg: {
+        position: "absolute",
+        right: 0,
+        top: 0,
+        bottom: 0,
+        width: "calc(60vw - 56px)",
+        "& > div": {
+          background: `url(${
+            process.env.PUBLIC_URL + "/img/bg.png"
+          }) no-repeat`,
+          backgroundSize: "cover",
           position: "absolute",
-          right: "-40%",
-          top: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "90%",
-          maxHeight: "300px",
+          right: 0,
+          top: 0,
+          bottom: 0,
+          width: "calc(60vw - 56px)",
         },
       },
-    },
-    sliderSteps: {
-      position: "absolute",
-      bottom: 0,
-      width: 210,
-      left: "calc(50% - 105px)",
-      display: "flex",
-      flexWrap: "nowrap",
-      zIndex: 99,
-      justifyContent: "space-between",
-      alignItems: "center",
-    },
-    sliderStep: {
-      cursor: "pointer",
-      width: 10,
-      marginRight: 16,
-      height: 10,
-      borderRadius: "50%",
-      boxSizing: "border-box",
-      border: "1px solid #27AE60",
-      "&:hover": {
+      container: {
+        position: "relative",
+        margin: "0 auto",
+        padding: "0 48px",
+        paddingBottom: "32px",
+        maxWidth: 1280,
+        boxSizing: "border-box",
+      },
+      slderTitle: {
+        marginBottom: 20,
+      },
+      sliderSubTitle: {
+        marginBottom: 32,
+        lineHeight: "40px",
+        color: "#4D565F",
+      },
+      sliderBtn: {
+        height: 64,
+        fontSize: 18,
+        lineHeight: "64px",
+        minWidth: 350,
+      },
+      slider: {
+        width: "100%",
+        overflowX: "hidden",
+        "& > div": {
+          width: "100%",
+          transition: "all .7s ease-in-out",
+          "& > div": {
+            width: "100%",
+          },
+        },
+      },
+      slide: {
+        "& > div:first-child": {
+          width: "calc(50% - 16px)",
+          padding: "90px 0 56px",
+        },
+      },
+      sliderSteps: {
+        position: "absolute",
+        bottom: 0,
+        width: 210,
+        left: "calc(50% - 105px)",
+        display: "flex",
+        flexWrap: "nowrap",
+        zIndex: 99,
+        justifyContent: "space-between",
+        alignItems: "center",
+      },
+      sliderStep: {
+        cursor: "pointer",
+        width: 10,
+        marginRight: 16,
+        height: 10,
+        borderRadius: "50%",
+        boxSizing: "border-box",
+        border: "1px solid #27AE60",
+        "&:hover": {
+          backgroundColor: "#27AE60",
+        },
+      },
+      active: {
         backgroundColor: "#27AE60",
       },
+      slideLeft: {
+        marginRight: 64,
+        cursor: "pointer",
+      },
+      slideRight: {
+        marginLeft: 48,
+        cursor: "pointer",
+      },
+      cardsText: {
+        "& > div": {
+          width: "calc(50% - 12px)",
+          marginBottom: 48,
+        },
+        "& > div:first-child": {
+          marginBottom: 28,
+        },
+        "& > div:nth-child(2)": {
+          marginBottom: 28,
+        },
+      },
+      header: {
+        paddingTop: 48,
+      },
     },
-    active: {
-      backgroundColor: "#27AE60",
+    [theme.breakpoints.down("md")]: {
+      outerContainer: {
+        backgroundSize: "cover",
+        position: "relative",
+      },
+      bgImg: {
+        position: "absolute",
+        right: 0,
+        top: 0,
+        bottom: 0,
+        width: "calc(60vw - 56px)",
+        "& > div": {
+          background: `url(${
+            process.env.PUBLIC_URL + "/img/bg.png"
+          }) no-repeat`,
+          backgroundSize: "cover",
+          position: "absolute",
+          right: 0,
+          top: 0,
+          bottom: 0,
+          width: "calc(60vw - 56px)",
+        },
+      },
+      container: {
+        position: "relative",
+        margin: "0 auto",
+        padding: "0 48px",
+        paddingBottom: "32px",
+        maxWidth: 1280,
+        boxSizing: "border-box",
+      },
+      slderTitle: {
+        marginBottom: 24,
+      },
+      sliderSubTitle: {
+        marginBottom: 48,
+        color: "#4D565F",
+      },
+      sliderBtn: {
+        minWidth: 300,
+        height: 64,
+        fontSize: 18,
+        lineHeight: "64px",
+      },
+      slider: {
+        width: "100%",
+        overflowX: "hidden",
+        "& > div": {
+          width: "100%",
+          transition: "all .7s ease-in-out",
+          "& > div": {
+            width: "100%",
+          },
+        },
+      },
+      slide: {
+        "& > div:first-child": {
+          width: "calc(50% - 16px)",
+          padding: "80px 0 92px",
+        },
+      },
+      sliderSteps: {
+        position: "absolute",
+        bottom: 0,
+        width: 210,
+        left: "calc(50% - 105px)",
+        display: "flex",
+        flexWrap: "nowrap",
+        zIndex: 99,
+        justifyContent: "space-between",
+        alignItems: "center",
+      },
+      sliderStep: {
+        cursor: "pointer",
+        width: 10,
+        marginRight: 16,
+        height: 10,
+        borderRadius: "50%",
+        boxSizing: "border-box",
+        border: "1px solid #27AE60",
+        "&:hover": {
+          backgroundColor: "#27AE60",
+        },
+      },
+      active: {
+        backgroundColor: "#27AE60",
+      },
+      slideLeft: {
+        marginRight: 64,
+        cursor: "pointer",
+      },
+      slideRight: {
+        marginLeft: 48,
+        cursor: "pointer",
+      },
+      cardsText: {
+        "& > div": {
+          width: "calc(50% - 12px)",
+          marginBottom: 48,
+        },
+        "& > div:first-child": {
+          marginBottom: 24,
+        },
+        "& > div:nth-child(2)": {
+          marginBottom: 24,
+        },
+      },
+      header: {
+        paddingTop: 48,
+      },
     },
-    slideLeft: {
-      marginRight: 64,
-      cursor: "pointer",
+    [theme.breakpoints.down("sm")]: {
+      sliderBtn: {
+        minWidth: 250,
+      },
+      bgImg: {
+        display: "block",
+        width: "100%",
+        position: "relative",
+        height: 260,
+        "& > div": {
+          width: "100%",
+          background: `url(${
+            process.env.PUBLIC_URL + "/img/bg_m.png"
+          }) no-repeat`,
+          backgroundSize: "cover",
+          backgroundPositionY: "bottom",
+          backgroundPositionX: "center",
+          position: "absolute",
+          right: 0,
+          top: 0,
+          bottom: 0,
+        },
+      },
+      slide: {
+        "& > div:first-child": {
+          width: "100%",
+          padding: "16px 0 0",
+        },
+      },
+      container: {
+        padding: "0 20px",
+      },
+      cardsText: {
+        "& > div": {
+          width: "100%",
+          marginBottom: 24,
+        },
+        "& > div:first-child": {
+          marginBottom: 12,
+        },
+        "& > div:nth-child(2)": {
+          marginBottom: 12,
+          order: 2,
+        },
+      },
+      header: {
+        paddingTop: 24,
+      },
     },
-    slideRight: {
-      marginLeft: 48,
-      cursor: "pointer",
+    [theme.breakpoints.down("xs")]: {
+      container: {
+        height: "auto",
+      },
+      slderTitle: {
+        marginBottom: 12,
+        fontSize: 22,
+      },
+      sliderBtn: {
+        height: 56,
+        fontSize: 16,
+        minWidth: "auto",
+        width: "100%",
+        boxSizing: "border-box",
+        bottom: "initial",
+        position: "relative",
+      },
+      sliderSteps: {
+        width: 94,
+        left: "calc(50% - 47px)",
+      },
+      sliderSubTitle: {
+        marginBottom: 12,
+        fontSize: 16,
+      },
+      cardsText: {
+        "& > div": {
+          width: "100%",
+          marginBottom: 12,
+          "& > span": {
+            fontWeight: 400,
+            "& > br": {
+              display: "none",
+            },
+          },
+        },
+        "& > div:nth-child(2n+1)": {
+          "& > span": {
+            display: "inline-block",
+            marginRight: 8,
+          },
+        },
+      },
+      header: {
+        display: "none",
+      },
+      slideRight: { display: "none" },
+      slideLeft: { display: "none" },
+      slide: {
+        flexDirection: "column-reverse",
+        flexWrap: "wrap",
+        "& > div:first-child": {
+          width: "100%",
+          padding: "16px 0 0",
+        },
+      },
     },
   })
 );
@@ -106,115 +348,25 @@ interface SliderStepsProps {
 
 interface SliderProps {
   steps: Array<SliderStepsProps> | SliderStepsProps;
+  scrollToOrder: any;
 }
 
 const Slider = (props: SliderProps) => {
-  const [slide, setSlide] = React.useState(0);
-
-  const slideArrow = (isNext: boolean) => {
-    if (isNext) {
-      if (slide + 1 === 3) {
-        setSlide(0);
-      } else {
-        setSlide(slide + 1);
-      }
-    } else {
-      if (slide - 1 === -1) {
-        setSlide(2);
-      } else {
-        setSlide(slide - 1);
-      }
-    }
-  };
-
   const classes = useStyles({});
   return (
-    <div
-      className={classes.outerContainer}
-      style={{
-        backgroundColor: !Array.isArray(props.steps) ? props.steps.bgColor : "",
-      }}
-    >
+    <div className={classes.outerContainer}>
+      <div className={classes.bgImg}>
+        <div></div>
+      </div>
       <div className={classes.container}>
-        <div className={classes.sliderSteps}>
-          {Array.isArray(props.steps) && (
-            <img
-              className={classes.slideLeft}
-              src={process.env.PUBLIC_URL + "/img/slide-left.svg"}
-              onClick={() => slideArrow(false)}
-            />
-          )}
-          {Array.isArray(props.steps) && props.steps.length > 1
-            ? props.steps.map((step: any, index: number) => {
-                return (
-                  <div
-                    className={`${classes.sliderStep} ${
-                      slide === index ? classes.active : ""
-                    }`}
-                    onClick={() => setSlide(index)}
-                  ></div>
-                );
-              })
-            : ""}
-
-          {Array.isArray(props.steps) && (
-            <img
-              className={classes.slideRight}
-              src={process.env.PUBLIC_URL + "/img/slide-right.svg"}
-              onClick={() => slideArrow(true)}
-            />
-          )}
-        </div>
         <div className={classes.slider}>
           <div>
-            {Array.isArray(props.steps) ? (
-              props.steps.map((step: any, index: number) => {
-                return slide === index ? (
-                  <div className="animate__animated animate__fadeIn">
-                    <Grid
-                      container
-                      justify="space-between"
-                      wrap="nowrap"
-                      className={classes.slide}
-                    >
-                      <Grid item>
-                        <BccTypography
-                          type="h1"
-                          block
-                          className={classes.slderTitle}
-                        >
-                          {step.title}
-                        </BccTypography>
-                        <BccTypography
-                          type="p1"
-                          block
-                          className={classes.sliderSubTitle}
-                        >
-                          {step.desc}
-                        </BccTypography>
-                        <BccButton
-                          variant="contained"
-                          color="primary"
-                          className={classes.sliderBtn}
-                        >
-                          <BccTypography type="p1" block>
-                            {step.btnText}
-                          </BccTypography>
-                        </BccButton>
-                      </Grid>
-                      <Grid item>
-                        <img
-                          src={process.env.PUBLIC_URL + step.img}
-                          alt="slide1"
-                        />
-                      </Grid>
-                    </Grid>
-                  </div>
-                ) : (
-                  ""
-                );
-              })
-            ) : !Array.isArray(props.steps) ? (
+            <Grid container className={classes.header}>
+              <Grid item>
+                <img src={process.env.PUBLIC_URL + "/img/logo.svg"} />
+              </Grid>
+            </Grid>
+            {!Array.isArray(props.steps) && (
               <Grid
                 container
                 justify="space-between"
@@ -222,35 +374,61 @@ const Slider = (props: SliderProps) => {
                 className={classes.slide}
               >
                 <Grid item>
-                  <BccTypography type="h1" block className={classes.slderTitle}>
+                  <BccTypography type="h2" block className={classes.slderTitle}>
                     {props.steps.title}
                   </BccTypography>
                   <BccTypography
-                    type="p1"
+                    type="h3"
+                    weight="normal"
                     block
                     className={classes.sliderSubTitle}
                   >
-                    {props.steps.desc}
+                    Оформите пенсионную карту — <br />
+                    Остальное мы сделаем за вас!
                   </BccTypography>
+                  <Grid
+                    container
+                    justify="space-between"
+                    className={classes.cardsText}
+                  >
+                    <Grid item>
+                      <BccTypography type="h5" mb="4px" block>
+                        Кэшбэк 3%
+                      </BccTypography>
+                      <BccTypography color="#4D565F" type="p2" block>
+                        💊 Аптеки
+                      </BccTypography>
+                    </Grid>
+                    <Grid item>
+                      <BccTypography type="p2" block>
+                        Бесплатный выпуск <br />и обслуживание <b>всегда</b>
+                      </BccTypography>
+                    </Grid>
+                    <Grid item>
+                      <BccTypography type="h6" mb="4px" block>
+                        Кэшбэк 2%
+                      </BccTypography>
+                      <BccTypography color="#4D565F" type="p2" block>
+                        🛒 Продукты
+                      </BccTypography>
+                    </Grid>
+                    <Grid item>
+                      <BccTypography type="p2" block>
+                        Автоматическая передача реквизитов клиента в ЦОН
+                      </BccTypography>
+                    </Grid>
+                  </Grid>
                   <BccButton
                     variant="contained"
                     color="primary"
+                    onClick={() => props.scrollToOrder()}
                     className={classes.sliderBtn}
                   >
-                    <BccTypography type="p1" block>
-                      {props.steps.btnText}
-                    </BccTypography>
+                    {props.steps.btnText}
                   </BccButton>
                 </Grid>
-                <Grid item>
-                  <img
-                    src={process.env.PUBLIC_URL + props.steps.img}
-                    alt="slide1"
-                  />
-                </Grid>
+                <Grid item></Grid>
               </Grid>
-            ) : (
-              ""
             )}
           </div>
         </div>

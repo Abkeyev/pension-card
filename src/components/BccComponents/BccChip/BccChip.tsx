@@ -4,13 +4,14 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     chipStyle: {
-      fontWeight: 300,
+      fontWeight: 400,
       display: "inline-block",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontSize: 12,
       lineHeight: "12px",
       padding: "8px 12px",
       borderRadius: 30,
+      cursor: "pointer",
     },
     block: {
       display: "block",
@@ -54,6 +55,7 @@ interface BccChipProps extends React.HTMLAttributes<HTMLSpanElement> {
   ml?: string | "0";
   type: "filled" | "outlined";
   color: "primary" | "secondary" | "sale";
+  onClick?: any;
   className?: string;
 }
 
@@ -84,6 +86,7 @@ const BccChip = (props: BccChipProps) => {
         marginBottom: mb,
         marginLeft: ml,
       }}
+      onClick={props.onClick}
     >
       {children}
     </span>

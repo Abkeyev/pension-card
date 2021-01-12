@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
+import ReactGA from "react-ga";
+ReactGA.initialize("UA-22343418-15");
 
 const theme = createMuiTheme({
   props: {

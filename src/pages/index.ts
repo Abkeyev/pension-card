@@ -1,15 +1,1 @@
 export { default as MainPage } from "./MainPage";
-export { default as BusinessPage } from "./BusinessPage";
-export { default as CreditsRestructuringPage } from "./CreditsRestructuringPage";
-export { default as CreditingPage } from "./CreditingPage";
-export { default as OpenCurrentAccountPage } from "./OpenCurrentAccountPage";
-export { default as CurrencyPage } from "./CurrencyPage";
-export { default as ContactsPage } from "./ContactsPage";
-export { default as BranchesPage } from "./BranchesPage";
-export { default as CallCenterPage } from "./CallCenterPage";
-export { default as NewsPage } from "./NewsPage";
-export { default as BaspanaHitPage } from "./BaspanaHitPage";
-export { default as FaqPage } from "./FaqPage";
-export { default as DetailsPage } from "./DetailsPage";
-export { default as p2pPage } from "./p2pPage";
-export { default as CarCreditPage } from "./CarCreditPage";
